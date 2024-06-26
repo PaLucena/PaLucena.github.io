@@ -28,6 +28,19 @@
 	position: fixed;
 	bottom: 0;
 	right: 0;
-	background-color: rgba(0, 0, 255, 0.3);
 	z-index: 2;
+}
+
+#content-Projects, #content-Contact {
+	display: none;
+}
+
+a {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover {
+	color: grey;
 }
