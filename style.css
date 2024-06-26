@@ -13,3 +13,8 @@
 	margin-top: 10px;
 	margin-bottom: 0;
 }
+
+.btn:focus, .btn:active:focus, .btn.active:focus{
+    outline:none;
+    box-shadow:none;
+}
