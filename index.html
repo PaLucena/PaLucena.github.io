@@ -10,21 +10,24 @@
 </head>
 <body data-bs-theme="dark">
 	<div id="root">
-		<div class="container-fluid">
+		<div class="container-fluid p-5" id="title">
 			<div class="row" style="padding: 1vh; margin-bottom: 4vh;">
 				<h1>Pablo Lucena González</h1>
 				<p>Developer</p>
 			</div>
 			<div class="row">
 				<div class="col-12">
-					<button class="btn fw-bold">Home</button>
+					<button class="btn fw-bold" id="Home" onclick="pressBtn(this)">Home</button>
 				</div>
 				<div class="col-12">
-					<button class="btn fw-bold">Projects</button>
+					<button class="btn fw-bold" id="Projects" onclick="pressBtn(this)">Projects</button>
 				</div>
 				<div class="col-12">
-					<button class="btn fw-bold">Contact</button>
+					<button class="btn fw-bold" id="Contact" onclick="pressBtn(this)">Contact</button>
 				</div>
+			</div>
+			<div class="container-fluid" id="content">
+				<div class="container">hola</div>
 			</div>
 		</div>
 	</div>
