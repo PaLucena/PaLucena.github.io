@@ -1,3 +1,31 @@
+@font-face {
+	font-family: 'Neue Montreal';
+	src: url(fonts/NeueMontreal-Regular.otf);
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Neue Montreal';
+	src: url(fonts/NeueMontreal-Bold.otf);
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Neue Montreal';
+	src: url(fonts/NeueMontreal-Medium.otf);
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Neue Montreal';
+	src: url(fonts/NeueMontreal-Light.otf);
+	font-weight: 100;
+	font-style: normal;
+}
+
 #root {
 	background-image: url(img/gradient.jpg);
 	box-sizing: border-box;
@@ -11,7 +39,14 @@
 
 .row h1 {
 	margin-top: 10px;
+	font-family: 'Neue Montreal';
+	font-weight: 100;
 	margin-bottom: 0;
+}
+
+.row p {
+	font-family: 'Neue Montreal';
+	font-weight: 300;
 }
 
 .btn:focus, .btn:active:focus, .btn.active:focus{
@@ -21,15 +56,11 @@
 
 #title {
 	position: absolute;
-	margin-top: 5vh;
-	margin-left: 5vh;
 	z-index: 1;
 }
 
 #content {
 	position: fixed;
-	margin-bottom: 5vh;
-	margin-right: 5vh;
 	bottom: 0;
 	right: 0;
 	z-index: 2;
@@ -39,16 +70,53 @@
 	display: none;
 }
 
+#content-Projects {
+	max-height: 82vh;
+	overflow-y: auto;
+	scrollbar-width: none;
+	mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+}
+
+#content-Projects::-webkit-scrollbar {
+	display: none;
+}
+
+#content-Projects #name {
+	font-family: 'Neue Montreal';
+	font-weight: 100;
+	font-size: 7dvh;
+	padding-bottom: 0;
+	margin-bottom: -0.3em;
+}
+
+#content-Projects #name a {
+	text-decoration: none;
+	color: white;
+	transition: color 0.3s ease;
+}
+
+#content-Projects #name a:hover {
+	color: gray;
+}
+
+#content-Projects #description {
+	font-family: monospace;
+	padding-top: 0;
+	margin-top: 0;
+}
+
 #content-Contact {
 	text-align: right;
 }
 
-a {
+#social {
 	color: white;
+	font-family: monospace;
 	font-weight: bold;
 	text-decoration: none;
+	transition: color 0.3s ease;
 }
 
-a:hover {
+#social:hover {
 	color: grey;
 }
