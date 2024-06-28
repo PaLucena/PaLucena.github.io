@@ -35,6 +35,7 @@
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	font-family: monospace;
+	overflow: hidden;
 }
 
 .row h1 {
@@ -66,11 +67,13 @@
 	z-index: 2;
 }
 
-#content-Projects, #content-Contact {
+/* #content-Projects */#content-Home, #content-Contact {
 	display: none;
 }
 
 #content-Projects {
+	width: 100vw;
+	height: 100vh;
 	max-height: 82vh;
 	overflow-y: auto;
 	scrollbar-width: none;
