@@ -67,12 +67,13 @@
 	z-index: 2;
 }
 
-/* #content-Projects */#content-Home, #content-Contact {
+#content-Projects, #content-Contact {
 	display: none;
 }
 
 #content-Projects {
-	width: 100vw;
+	z-index: inherit;
+	width: 80vw;
 	height: 100vh;
 	max-height: 82vh;
 	overflow-y: auto;
