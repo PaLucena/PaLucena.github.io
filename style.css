@@ -27,6 +27,8 @@
 }
 
 #root {
+	width: 100%;
+	height: 100%;
 	background-image: url(img/gradient.jpg);
 	box-sizing: border-box;
 	margin: 0;
@@ -35,7 +37,7 @@
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	font-family: monospace;
-	overflow: hidden;
+	overflow-y: hidden;
 }
 
 .row h1 {
@@ -61,17 +63,19 @@
 }
 
 #content {
-	position: fixed;
-	bottom: 0;
-	right: 0;
+	overflow-y: hidden;
 	z-index: 2;
 }
 
-#content-Projects, #content-Contact {
+#content-projects, #content-contact {
 	display: none;
 }
 
-#content-Projects {
+#content-home {
+	background-color: grey;
+}
+
+#content-projects {
 	z-index: inherit;
 	width: 80vw;
 	height: 100vh;
@@ -81,11 +85,11 @@
 	mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
 }
 
-#content-Projects::-webkit-scrollbar {
+#content-projects::-webkit-scrollbar {
 	display: none;
 }
 
-#content-Projects #name {
+#content-projects #name {
 	font-family: 'Neue Montreal';
 	font-weight: 100;
 	font-size: 7dvh;
@@ -93,23 +97,23 @@
 	margin-bottom: -0.3em;
 }
 
-#content-Projects #name a {
+#content-projects #name a {
 	text-decoration: none;
 	color: white;
 	transition: color 0.3s ease;
 }
 
-#content-Projects #name a:hover {
+#content-projects #name a:hover {
 	color: gray;
 }
 
-#content-Projects #description {
+#content-projects #description {
 	font-family: monospace;
 	padding-top: 5px;
 	margin-top: 0;
 }
 
-#content-Contact {
+#content-contact {
 	text-align: right;
 }
 

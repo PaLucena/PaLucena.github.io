@@ -1,13 +1,17 @@
+function	pressBtn() {
 
-function	pressBtn(btn) {
-	if (btn.innerHTML !== "●") {
-		document.querySelectorAll(".btn").forEach(element => {
-			if (element.innerHTML === "●")
-				element.innerHTML = element.id;
-		})
-		btn.innerHTML = "●";
-		showContent(btn);
-	}
+	let btns = document.querySelectorAll(".btn");
+	
+	btns.forEach(btn => {
+		btn.addEventListener('click', () => {
+			btns.forEach(thisBtn => {
+				if (thisBtn != btn)
+					thisBtn.innerHTML = thisBtn.id;
+			});
+			btn.innerHTML = "●";
+			showContent(btn)
+		});
+	});
 }
 
 function	showContent(btn) {
@@ -16,3 +20,5 @@ function	showContent(btn) {
 	});
 	document.querySelector("#content-" + btn.id).style.display = "block";
 }
+
+pressBtn();
