@@ -55,16 +55,21 @@
 	box-shadow:none;
 }
 
-#title {
+.title {
 	position: absolute;
-	z-index: 1;
 }
 
-#content {
+.title-btns {
+	z-index: 3;
 	position: fixed;
+}
+
+.content {
+	position: absolute;
 	bottom: 0;
 	right: 0;
-	z-index: 2;
+	margin-bottom: 5%;
+	margin-right: 5%;
 }
 
 #content-Projects, #content-Contact {
@@ -87,8 +92,8 @@
 
 #content-Projects #name {
 	font-family: 'Neue Montreal';
-	font-weight: 100;
-	font-size: 7dvh;
+	font-weight: 50;
+	font-size: 4dvh;
 	padding-bottom: 0;
 	margin-bottom: -0.3em;
 }
@@ -105,6 +110,7 @@
 
 #content-Projects #description {
 	font-family: monospace;
+	font-size: 2dvh;
 	padding-top: 5px;
 	margin-top: 0;
 }
@@ -123,4 +129,32 @@
 
 #social:hover {
 	color: grey;
+}
+
+@media only screen and (min-width: 400px) {
+	#content-Projects #name {
+		font-size: 5.5dvh;
+	}
+
+	#content-Projects #description {
+		font-size: 3dvh;
+	}
+}
+
+@media only screen and (min-width: 800px) {
+	.title {
+		margin: 4%;
+	}
+
+	.content {
+		margin: 3%;
+	}
+
+	#content-Projects #name {
+		font-size: 7dvh;
+	}
+
+	#content-Projects #description {
+		font-size: 2dvh;
+	}
 }
